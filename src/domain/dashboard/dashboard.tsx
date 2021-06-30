@@ -18,6 +18,7 @@ export const Dashboard = () => {
     };
 
     const handleClick = async () => {
+        // The API is returning CORS error when I make this request, so I decided to mock the data
         //const data = await getProductsApi(filter);
         const data = PRODUCTS_MOCK
         setProducts(data);
