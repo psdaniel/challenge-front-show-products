@@ -1,10 +1,13 @@
+import { useStyles } from './show-products.styles';
 import { ShowProductsProps } from './show-products.types';
 
 
 export const ShowProducts = ({ data }: ShowProductsProps) => {
+    const classes = useStyles();
+
     return (
-        <div>
-            {data.map((product, index) => (<li key={index}>{product.name}</li>))}
+        <div className={classes.showProductsContainer}>
+            {data.map((product, index) => (<ul className={classes.itemList} key={index}>{product.name}</ul>))}
         </div>
     )
 }
